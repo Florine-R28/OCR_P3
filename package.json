@@ -1,0 +1,20 @@
+{
+  "name": "projet_3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./styles/main.scss:.public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Florine-R28/RodriguesFlorine_3_24062021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Florine-R28/RodriguesFlorine_3_24062021/issues"
+  },
+  "homepage": "https://github.com/Florine-R28/RodriguesFlorine_3_24062021#readme"
+}
