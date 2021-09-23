@@ -1,0 +1,88 @@
+/*Onglet recherche de la ville*/
+.research {
+  display: flex;
+  justify-content: center;
+  background-color: #eaeaea;
+  padding: 20px 0;
+  font-weight: bold;
+  width: 100%;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 40px 40px;
+  margin-bottom: 50px;
+}
+.presentation__book {
+  font-weight: bold;
+  font-size: 25px;
+}
+.presentation__explore {
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-align: center;
+  color: #FFF;
+  font-weight: normal;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+  transition: background-color 250ms;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.presentation__explore:hover {
+  opacity: 0.8;
+  box-shadow: 1rem 1rem 20px rgba(0, 0, 0, 0.25);
+}
+
+/*Header*/
+header {
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  width: 100%;
+  min-width: 320px;
+  padding: 21px 0;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+header .logo img {
+  max-width: 168px;
+}
+
+footer {
+  background-color: #353535;
+  padding: 25px;
+  color: white;
+}
+
+h3 {
+  font-family: "Shrikhand", "sans-serif";
+  padding: 5px 0 20px 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+ul {
+  list-style-type: none;
+}
+ul li {
+  padding: 5px 0 5px 0;
+}
+ul li a {
+  color: white;
+}
+
+.fa-utensils {
+  margin-right: 12px;
+}
+
+.fa-hands-helping {
+  margin-right: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
