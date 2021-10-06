@@ -34,11 +34,11 @@ h1 {
   padding: 40px 40px;
   margin-bottom: 50px;
 }
-.presentation__book {
+.presentation_book {
   font-weight: bold;
   font-size: 25px;
 }
-.presentation__explore {
+.presentation_explore {
   padding: 0.75rem 1.5rem;
   border-radius: 30px;
   text-align: center;
@@ -51,7 +51,7 @@ h1 {
   transition: background-color 250ms;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
-.presentation__explore:hover {
+.presentation_explore:hover {
   opacity: 0.8;
   box-shadow: 1rem 1rem 20px rgba(0, 0, 0, 0.25);
 }
