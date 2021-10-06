@@ -1,0 +1,52 @@
+/*Fonctionnement*/
+
+.function_title {
+    margin: 0 0 20px 22px;
+}
+
+.function {
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 15px;  
+
+    h2 {
+        margin: 0 0 30px 0;
+    }
+
+    &_choice {
+        margin: 0 20px 20px 40px;
+        background-color: #F6F6F6;
+        padding: 30px 50px 30px 18px;
+        margin-left: 20px;
+        border-radius: 20px;
+        font-family: 'Roboto', sans-serif;
+        width: 300px;
+        display: flex;
+        flex-direction: row ;
+        justify-content: center;
+
+        &:hover {
+            background-color: #f5edff;
+
+            .fas {
+               color : $colour-primary;
+            }
+        }
+
+        &_nb {
+            width: 18px;
+            height: 18px;
+            padding: 4px 4px;
+            color: white;
+            display:flex ;
+            border-radius: 15px;
+            border: solid 1px $colour-secondary;
+            background-color: $colour-secondary;
+
+        }
+    }
+}

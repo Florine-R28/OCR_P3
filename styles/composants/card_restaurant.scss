@@ -1,0 +1,126 @@
+/*Restaurants*/
+
+.restaurants {
+    background-color: #f6f6f6;
+
+    &_container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &_title {
+        padding: 50px 0 10px 22px;
+    }
+
+    &_card {
+        border-radius: 20px;
+        background-color: white;
+        margin-bottom: 18px;
+        position: relative;
+        max-width: 280px;
+        min-width: 280px;
+
+        @media screen and (min-width: 375px) {
+            max-width: 330px;
+            min-width: 280px;
+        }
+
+        @media screen and (min-width: 650px) {
+            margin-right: 25px;
+        }
+
+        img {
+            width: 100%;
+            max-height: 175px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            object-fit: cover;
+        }
+
+        .restaurants_card_content {
+            padding: 19px 11px;
+            position: relative;
+            display: flex;
+
+            h3 {
+                margin-bottom: 6px;
+            }
+
+            .restaurants_card_content_name {
+                position: relative;
+            }
+
+            @keyframes heart_full_opacity {
+                0% {
+                    opacity: 0;
+                }
+
+                50% {
+                    opacity: 0.5;
+                    background-image: linear-gradient(100deg, $colour-primary, $colour-secondary);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                100% {
+                    opacity: 1;
+                    background-image: linear-gradient(100deg, $colour-primary, $colour-secondary);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+
+            @keyframes heart_empty_opacity1 {
+                0% {
+                    opacity: 1;
+                }
+
+                50% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 0;
+                }
+            }
+
+            .heart {
+                position: absolute;
+                right: 20px;
+                top: 1;
+
+                &_1 {
+                    position: relative;
+
+                    &:hover {
+                        animation: heart__empty__opacity1 1s;
+                    }
+                }
+
+                &_2 {
+                    position: absolute;
+                    top: 0px;
+                    opacity: 0;
+                    color: #FFF;
+
+                    &:hover {
+                        animation: heart_full_opacity 1s forwards;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .btn-new {
+        background-color: $colour-tertiary;
+        color: #1b6150;
+        padding: .5rem;
+        border-radius: .125rem;
+        position: absolute;
+        top: 1rem;
+        right: .75rem;
+    }
+}
