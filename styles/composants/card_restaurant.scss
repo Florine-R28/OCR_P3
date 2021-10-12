@@ -30,13 +30,7 @@
         background-color: white;
         margin-bottom: 18px;
         position: relative;
-        max-width: 280px;
-        min-width: 280px;
-
-        @media screen and (min-width: 375px) {
-            max-width: 330px;
-            min-width: 280px;
-        }
+        width: 330px;
 
         @media screen and (min-width: 650px) {
             margin-right: 25px;
