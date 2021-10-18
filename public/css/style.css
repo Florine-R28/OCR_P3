@@ -133,11 +133,17 @@ body {
   .restaurants_container {
     max-width: 900px;
     margin: auto;
+    padding-bottom: 30px;
   }
 }
 @media screen and (max-width: 600px) {
   .restaurants_container {
     flex-direction: column;
+  }
+}
+@media (min-width: 601px) and (max-width: 1800px) {
+  .restaurants_container {
+    padding-bottom: 30px;
   }
 }
 .restaurants_title {
@@ -245,6 +251,11 @@ body {
   justify-content: space-between;
   padding: 0 10px;
 }
+@media (min-width: 601px) and (max-width: 1800px) {
+  .function {
+    padding-bottom: 30px;
+  }
+}
 .function h2 {
   margin: 0 0 30px 0;
 }
@@ -279,6 +290,8 @@ body {
   position: absolute;
   left: -10px;
   top: 22px;
+  align-items: center;
+  justify-content: center;
 }
 
 /*Photo restaurant */
@@ -286,6 +299,11 @@ body {
   width: 100%;
   max-height: 250px;
   object-fit: cover;
+}
+@media (min-width: 601px) and (max-width: 1800px) {
+  .photo_restaurant {
+    max-height: 450px;
+  }
 }
 
 /*Carte restaurant*/
@@ -305,10 +323,15 @@ body {
     justify-content: space-between;
   }
 }
+@media (min-width: 601px) and (max-width: 1800px) {
+  .card_global {
+    padding-bottom: 50px;
+  }
+}
 
 .card {
   background-color: #F6F6F6;
-  padding: 36px 15px;
+  padding: 36px 25px 10px 25px;
   margin-top: -55px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -327,6 +350,11 @@ body {
   margin-right: 30px;
   width: 110px;
   margin-left: 5px;
+}
+@media (min-width: 601px) and (max-width: 1800px) {
+  .entrees {
+    margin-bottom: 20px;
+  }
 }
 .entrees h2::after {
   content: "";
@@ -356,6 +384,7 @@ body {
 @media screen and (max-width: 1032px) {
   .card_global_entrees {
     flex-direction: column;
+    margin-bottom: 20px;
   }
 }
 
@@ -371,6 +400,7 @@ body {
 @media screen and (max-width: 1032px) {
   .card_global_plats {
     flex-direction: column;
+    margin-bottom: 20px;
   }
 }
 
@@ -386,6 +416,7 @@ body {
 @media screen and (max-width: 1032px) {
   .card_global_desserts {
     flex-direction: column;
+    margin-bottom: 20px;
   }
 }
 
@@ -414,11 +445,11 @@ body {
 }
 @media screen and (min-width: 400px) and (max-width: 1024px) {
   .card_global_contenu {
-    width: 350px;
+    width: 340px;
   }
 }
 .card_global_contenu_dish {
-  width: 350px;
+  width: 340px;
   padding: 14px 0;
   border-radius: 0.75rem;
   display: flex;
@@ -528,7 +559,7 @@ body {
 
 /*Bouton Commander*/
 .bouton_commander {
-  padding: 30px 0 80px 0;
+  padding: 20px 0 60px 0;
   text-align: center;
   background-color: #F6F6F6;
 }
