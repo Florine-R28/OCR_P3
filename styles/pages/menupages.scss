@@ -1,3 +1,8 @@
+/*Banniere*/
+.banner {
+    position: relative;
+}
+
 /*Photo restaurant */
 .photo_restaurant {
         width: 100%;
@@ -8,11 +13,27 @@
             max-height: 450px;
         }
 }
+
 /*Carte restaurant*/
 
 .card_title {
-    font-family: 'Shrikhand', cursive;
-    max-width: 322px;
+    font-family: 'Shrikhand', 'Roboto', sans-serif;
+    display: flex;
+}
+
+.card_heart_1 {
+    margin-left: 50px;
+    font-size: 1.6em;
+}
+
+.card_heart_2 {
+    margin-left: 80px;
+    font-size: 1.6em;
+}
+
+.card_heart_3 {
+    margin-left: 100px;
+    font-size: 1.6em;
 }
 
 .fa-heart:before {
@@ -22,7 +43,6 @@
 .card_global {
     @media screen and (min-width: 1024px) {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
     }
 
@@ -33,7 +53,7 @@
 
 .card {
     background-color: #F6F6F6;
-    padding: 36px 25px 10px 25px;
+    padding: 36px 15px 10px 15px;
     margin-top: -55px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
@@ -81,43 +101,16 @@
 .card_global_entrees {
     animation: fadein 2s;
     display: flex;
-
-    @media screen and (min-width: 1140px) {
-        margin-right: 10px;
-    }
-
-    @media screen and (max-width: 1032px) {
-        flex-direction: column;
-        margin-bottom: 20px
-    }
 }
 
 .card_global_plats {
     animation: fadein 4s;
     display: flex;
-
-    @media screen and (min-width: 1142px) {
-        margin-right: 10px;
-    }
-
-    @media screen and (max-width: 1032px) {
-        flex-direction: column;
-        margin-bottom: 20px
-    }
 }
 
 .card_global_desserts {
     animation: fadein 6s;
     display: flex;
-
-    @media screen and (min-width: 1142px) {
-        margin-right: 10px;
-    }
-
-    @media screen and (max-width: 1032px) {
-        flex-direction: column;
-        margin-bottom: 20px
-    }
 }
 
 .card_global_entrees,
@@ -126,6 +119,17 @@
     h2 {
         font-weight: normal;
         font-size: 20px;
+    }
+
+    @media screen and (min-width: 1142px) {
+        margin-right: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 1032px) {
+        flex-direction: column;
+        margin-bottom: 20px
     }
 }
 
@@ -140,12 +144,9 @@
     justify-content: space-between;
     overflow: hidden;
 
+
     @media (min-width: 768px) and (max-width: 2000px) {
     margin-right: 30px;
-    }
-
-    @media screen and (min-width: 400px) and (max-width: 1024px) {
-        width: 340px;
     }
 
     &_dish {
@@ -204,7 +205,6 @@
             @media screen and (max-width:405px) {
                 max-width: 130px;
             }
-
         }
 
         .circle {
@@ -274,7 +274,7 @@
 
 /*Bouton Commander*/
 
-.bouton_commander {
+.button_commander {
     padding: 20px 0 60px 0;
     text-align: center;
     background-color: #F6F6F6;

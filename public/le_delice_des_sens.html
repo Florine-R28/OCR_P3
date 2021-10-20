@@ -5,16 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/7d17636476.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <header>
-            <div id="logo">
-                <img class="logo" src="./images/logo/ohmyfood.png" alt="logo"/>
-                <a href="./index.html">
-                    <i class="fas fa-arrow-left"></i>
-                </a>
-            </div>
+            <div class="arrow"><a href="./index.html"><i class="fas fa-arrow-left"></i></a></div>
+            <img class="logo" src="./images/logo/ohmyfood.png" alt="logo"/>
         </header>
 
         <div>
@@ -22,7 +20,12 @@
         </div>
         
         <section class="card">
-            <h2 class="card_title">Le délice de sens<i class="far fa-heart"></i></h2>
+            <div class="card_title">
+                <h2>Le délice de sens</h2>
+                    <div class="card_heart_2">
+                        <span><i class="far fa-heart"></i></span>
+                    </div>
+                </div>
 
                 <div class="card_global">
                     <div class="card_global_entrees">
@@ -203,8 +206,8 @@
                 </div>
         </section>
 
-        <section class="bouton_commander">
-            <a class="bouton_commander--pink" href="#">Commander</a>
+        <section class="button_commander">
+            <a class="button_commander--pink" href="#">Commander</a>
         </section>
 
         <footer>

@@ -48,23 +48,31 @@ h1 {
 
 /*Header*/
 header {
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-  width: 100%;
-  padding: 21px 0;
+  padding: 20px 40px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 header .logo {
   margin: auto;
   display: block;
-  width: auto;
 }
 @media (min-width: 300px) and (max-width: 767px) {
   header .logo {
     width: 150px;
   }
 }
+header .arrow {
+  margin-top: 20px;
+}
+@media (min-width: 300px) and (max-width: 767px) {
+  header .arrow {
+    margin: 0;
+  }
+}
 
 .footer_title {
-  font-family: "Shrikhand", "sans-serif";
+  font-family: "Shrikhand", "Roboto", sans-serif;
   padding: 5px 0 20px 0;
   font-size: 1.5rem;
   font-weight: 500;
@@ -105,17 +113,16 @@ a {
   color: black;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  font-family: "Roboto", sans-serif;
-}
-
 body {
   box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Shrikhand", "Roboto", sans-serif;
+}
+
+body, html {
+  font-family: "Roboto", sans-serif;
 }
 
 /*Restaurants*/
@@ -294,6 +301,11 @@ body {
   justify-content: center;
 }
 
+/*Banniere*/
+.banner {
+  position: relative;
+}
+
 /*Photo restaurant */
 .photo_restaurant {
   width: 100%;
@@ -308,8 +320,23 @@ body {
 
 /*Carte restaurant*/
 .card_title {
-  font-family: "Shrikhand", cursive;
-  max-width: 322px;
+  font-family: "Shrikhand", "Roboto", sans-serif;
+  display: flex;
+}
+
+.card_heart_1 {
+  margin-left: 50px;
+  font-size: 1.6em;
+}
+
+.card_heart_2 {
+  margin-left: 80px;
+  font-size: 1.6em;
+}
+
+.card_heart_3 {
+  margin-left: 100px;
+  font-size: 1.6em;
 }
 
 .fa-heart:before {
@@ -319,7 +346,6 @@ body {
 @media screen and (min-width: 1024px) {
   .card_global {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
   }
 }
@@ -331,7 +357,7 @@ body {
 
 .card {
   background-color: #F6F6F6;
-  padding: 36px 25px 10px 25px;
+  padding: 36px 15px 10px 15px;
   margin-top: -55px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -376,48 +402,15 @@ body {
   animation: fadein 2s;
   display: flex;
 }
-@media screen and (min-width: 1140px) {
-  .card_global_entrees {
-    margin-right: 10px;
-  }
-}
-@media screen and (max-width: 1032px) {
-  .card_global_entrees {
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-}
 
 .card_global_plats {
   animation: fadein 4s;
   display: flex;
 }
-@media screen and (min-width: 1142px) {
-  .card_global_plats {
-    margin-right: 10px;
-  }
-}
-@media screen and (max-width: 1032px) {
-  .card_global_plats {
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-}
 
 .card_global_desserts {
   animation: fadein 6s;
   display: flex;
-}
-@media screen and (min-width: 1142px) {
-  .card_global_desserts {
-    margin-right: 10px;
-  }
-}
-@media screen and (max-width: 1032px) {
-  .card_global_desserts {
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
 }
 
 .card_global_entrees h2,
@@ -425,6 +418,23 @@ body {
 .card_global_desserts h2 {
   font-weight: normal;
   font-size: 20px;
+}
+@media screen and (min-width: 1142px) {
+  .card_global_entrees,
+.card_global_plats,
+.card_global_desserts {
+    margin-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1032px) {
+  .card_global_entrees,
+.card_global_plats,
+.card_global_desserts {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
 }
 
 .card_global_contenu {
@@ -441,11 +451,6 @@ body {
 @media (min-width: 768px) and (max-width: 2000px) {
   .card_global_contenu {
     margin-right: 30px;
-  }
-}
-@media screen and (min-width: 400px) and (max-width: 1024px) {
-  .card_global_contenu {
-    width: 340px;
   }
 }
 .card_global_contenu_dish {
@@ -558,12 +563,12 @@ body {
 }
 
 /*Bouton Commander*/
-.bouton_commander {
+.button_commander {
   padding: 20px 0 60px 0;
   text-align: center;
   background-color: #F6F6F6;
 }
-.bouton_commander--pink {
+.button_commander--pink {
   background-color: #9356DC;
   padding: 15px 50px;
   border-radius: 30px;
@@ -577,7 +582,7 @@ body {
   transition: background-color 250ms;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
-.bouton_commander--pink:hover {
+.button_commander--pink:hover {
   opacity: 0.8;
   box-shadow: 1rem 1rem 20px rgba(0, 0, 0, 0.25);
 }
