@@ -325,15 +325,15 @@ body, html {
 
 /*animation cards*/
 .card_global_entrees {
-  animation: fadeIn 3s;
+  animation: fadeIn 2s;
 }
 
 .card_global_plats {
-  animation: fadeIn 5s;
+  animation: fadeIn 10s;
 }
 
 .card_global_desserts {
-  animation: fadeIn 7s;
+  animation: fadeIn 18s;
 }
 
 @keyframes fadeIn {
@@ -560,7 +560,6 @@ body, html {
 .heart {
   position: absolute;
   right: 35px;
-  top: 1;
 }
 .heart_1 {
   position: relative;
