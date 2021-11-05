@@ -49,7 +49,7 @@
         }
 
         .restaurants_card_content {
-            padding: 19px 11px;
+            padding: 20px 20px;
             position: relative;
             display: flex;
 
@@ -59,65 +59,6 @@
 
             .restaurants_card_content_name {
                 position: relative;
-            }
-
-            @keyframes heart_full_opacity {
-                0% {
-                    opacity: 0;
-                }
-
-                50% {
-                    opacity: 0.5;
-                    background-image: linear-gradient(100deg, $colour-primary, $colour-secondary);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-
-                100% {
-                    opacity: 1;
-                    background-image: linear-gradient(100deg, $colour-primary, $colour-secondary);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-            }
-
-            @keyframes heart_empty_opacity1 {
-                0% {
-                    opacity: 1;
-                }
-
-                50% {
-                    opacity: 0;
-                }
-
-                100% {
-                    opacity: 0;
-                }
-            }
-
-            .heart {
-                position: absolute;
-                right: 20px;
-                top:0px;
-
-                &_1 {
-                    position: relative;
-
-                    &:hover {
-                        animation: heart__empty__opacity1 1s;
-                    }
-                }
-
-                &_2 {
-                    position: absolute;
-                    top: 0px;
-                    opacity: 0;
-                    color: #FFF;
-
-                    &:hover {
-                        animation: heart_full_opacity 1s forwards;
-                    }
-                }
             }
         }
 

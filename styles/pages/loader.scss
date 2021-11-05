@@ -1,58 +1,84 @@
-/*Loader*/
+.loader-section{
+    width: 100vw;
+    height: 100vh;
+    position:fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(255, 255, 255,0.9);
+    animation: opacity 0.1s 3.2s both;
+  
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 145px;
+        height: 145px;
+        position: relative;
+    }
+    &__cercle-wrapper{
+        position: absolute;  
+        border-radius: 50%;
+        animation: loader linear infinite ;
+          @for $i from 1 through 3{
+              &:nth-child(#{$i}) {
+                 animation-duration:($i*0.1+0.6s);
+              }
+          }
+        &--1{
+            width: 100px;
+            height: 100px;
+        }
+        &--2{
+            width: 60px;
+            height: 60px  
+        }
+        &--3{
+            width: 35px;
+            height: 35px;    
+        }
 
-.loader {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: #FFF;
-    left: 0;
-    top: 0;
-    z-index: 10000;
-    animation: loader 3s forwards;
+    }
+    &__cercle{
+        border-radius: 50%;
+        position: absolute;
+        &--1{
+            width: 35px;
+            height: 35px;
+            background-color: #9256dc;
+        }
+        &--2{
+            width: 30px;
+            height: 30px;
+            background-color: #ff7ad9;
+        }
+        &--3{
+            width: 20px;
+            height: 20px;
+            background-color: #99E2D0;
+        }
+       
+    }
 }
 
-/*Animation loader*/
 
-@keyframes loader {
-    0% {
-        opacity: 1;
-    }
+@keyframes loader{
+    0%{
+      transform: rotate(0deg);
+  }
 
-    100% {
+
+  100%{
+      transform: rotate(360deg);
+      
+  }
+}
+
+@keyframes opacity{
+       
+    100%{
         opacity: 0;
-        z-index: -10;
-    }
-}
-
-.loader__circle {
-    border: 10px solid #F3F3F3;
-    border-top: 10px solid $colour-primary;
-    border-bottom: 10px solid $colour-secondary;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    animation: spin 3s linear forwards;
-
-    /*Placement du loader au milieu de la page*/
-
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-/*Animation du loader circle*/
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-        opacity: 1;
-    }
-
-    100% {
-        transform: rotate(360deg);
-        opacity: 0;
+        z-index: -1;
     }
 }

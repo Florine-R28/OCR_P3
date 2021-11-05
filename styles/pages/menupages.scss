@@ -24,24 +24,6 @@
     display: flex;
 }
 
-.card_heart_1 {
-    margin-left: 50px;
-    font-size: 1.6em;
-}
-
-.card_heart_2 {
-    margin-left: 80px;
-    font-size: 1.6em;
-}
-
-.card_heart_3 {
-    margin-left: 100px;
-}
-
-.fa-heart:before {
-    margin-left: 20px;
-}
-
 .card_global {
     @media screen and (min-width: 1024px) {
         display: flex;
@@ -61,10 +43,6 @@
     border-top-right-radius: 30px;
     position: relative;
     z-index: 1;
-
-    .far {
-        align-self: flex-end;
-    }
 
     h2 {
         margin-bottom: 35px;
@@ -90,28 +68,27 @@
     }
 }
 
-@keyframes fadein {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
+/*animation cards*/
 .card_global_entrees {
-    animation: fadein 2s;
-    display: flex;
+    animation: fadeIn 3s;
 }
 
 .card_global_plats {
-    animation: fadein 4s;
-    display: flex;
+    animation: fadeIn 5s;
 }
 
 .card_global_desserts {
-    animation: fadein 6s;
+    animation: fadeIn 7s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.card_global_entrees,
+.card_global_plats,
+.card_global_desserts {
     display: flex;
 }
 
@@ -223,6 +200,10 @@
     align-items: center;
     justify-content: center;
     margin-right: -64px;
+
+    @media (min-width : 1000px) and (max-width: 1800px) {
+        margin-bottom: -20px;
+    }
 }
 
 .circle {
