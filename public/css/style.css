@@ -216,7 +216,7 @@ body, html {
 .restaurants_card .restaurants_card_content .heart {
   position: absolute;
   right: 20px;
-  top: 1;
+  top: 0px;
 }
 .restaurants_card .restaurants_card_content .heart_1 {
   position: relative;
@@ -307,7 +307,7 @@ body, html {
 
 /*Photo restaurant */
 .photo_restaurant {
-  width: 100%;
+  width: 105%;
   object-fit: cover;
 }
 @media (min-width: 601px) and (max-width: 1800px) {
@@ -339,7 +339,6 @@ body, html {
 
 .card_heart_3 {
   margin-left: 100px;
-  font-size: 1.6em;
 }
 
 .fa-heart:before {
@@ -455,6 +454,7 @@ body, html {
 @media (min-width: 768px) and (max-width: 2000px) {
   .card_global_contenu {
     margin-right: 30px;
+    padding-bottom: 15px;
   }
 }
 .card_global_contenu_dish {
@@ -498,7 +498,6 @@ body, html {
 }
 .card_global_contenu:hover .header_menu h4 {
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
 }
 @media screen and (max-width: 405px) {
@@ -563,7 +562,6 @@ body, html {
 .header_menu h4 {
   font-weight: normal;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 /*Bouton Commander*/
@@ -589,6 +587,90 @@ body, html {
 .button_commander--pink:hover {
   opacity: 0.8;
   box-shadow: 1rem 1rem 20px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes heart_empty_opacity1 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.heart {
+  position: absolute;
+  right: 50px;
+  top: 35px;
+  top: 1;
+}
+.heart_1 {
+  position: relative;
+}
+.heart_1:hover {
+  animation: heart__empty__opacity1 1s;
+}
+.heart_2 {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  color: #FFF;
+}
+.heart_2:hover {
+  animation: heart_full_opacity 1s forwards;
+}
+
+/*Loader*/
+.loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #FFF;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  animation: loader 3s forwards;
+}
+
+/*Animation loader*/
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+.loader__circle {
+  border: 10px solid #F3F3F3;
+  border-top: 10px solid #9356DC;
+  border-bottom: 10px solid #FF79DA;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 3s linear forwards;
+  /*Placement du loader au milieu de la page*/
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/*Animation du loader circle*/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
